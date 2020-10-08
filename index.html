@@ -191,6 +191,7 @@ display: inline-block;
   color: green;
 }
 
+/* Not used anymore! */
 aside {
   position: absolute;
   left: 350px;
@@ -338,11 +339,13 @@ a.listLink:hover {
     </div>
   </div>
 
-    <aside id="totals">
+    <div id="totals" style="display:block">
         <span id="active">-</span> od <span id="total">-</span> osoba odabrano.
         <br>
         <a href="" onclick="downloadData()">Preuzmi odabrane podatke.</a> 
-    </aside>
+    </div>
+
+    <br>
 
     <div style="display:block">
         Nasumičnih 30 osoba iz odabira...
