@@ -313,7 +313,7 @@ a.listLink:hover {
 
 <p><a href="https://matijapiskorec.github.io/koronavirushr">koronavirushr</a> je vizualizacija podataka o osobama zaraženima korona virusom u Hrvatskoj koristeći strojno čitljive podatke s <a href="https://koronavirus.hr">koronavirus.hr</a>. Vizualizacija koristi <a href="http://d3js.org/">D3</a> za vizualizaciju i <a href="http://square.github.io/crossfilter/">Crossfilter</a> za filtriranje podataka, a modelirana je po službenom Crossfilter <a href="https://github.com/square/crossfilter">primjeru</a>.</p>
 
-<p>Primjerice, možete vidjeti kakva je razlika u dobi zaraženih između <a href="javascript:filter([null,[new Date(2020,2,1,),new Date(2020,4,25)]])">prvog vala</a>, <a href="javascript:filter([null,[new Date(2020,5,1,),new Date(2020,7,8)]])">drugog vala</a> i <a href="javascript:filter([null,[new Date(2020,7,8),new Date(2020,8,27)]])">trećeg vala</a> zaraza u Hrvatskoj.</p>
+<p>Primjerice, možete vidjeti kakva je razlika u dobi zaraženih između <a href="javascript:filter([null,[new Date(2020,2,1,),new Date(2020,4,25)]])">prvog vala</a>, <a href="javascript:filter([null,[new Date(2020,5,1,),new Date(2020,7,8)]])">drugog vala</a> i <a href="javascript:filter([null,[new Date(2020,7,8),new Date(2020,8,27)]])">trećeg vala</a> zaraza u Hrvatskoj. Također, može se primjetiti da su zaraženi na <a href="javascript:filter([null,[new Date(2020,5,10),new Date(2020,6,5)]])">početku drugog</a> i <a href="javascript:filter([null,[new Date(2020,7,8),new Date(2020,7,30)]])">početku trećeg</a> vala u prosjeku mlađi od zaraženih u <a href="javascript:filter([null,[new Date(2020,6,5),new Date(2020,7,9)]])">ostatku drugog</a> i <a href="javascript:filter([null,[new Date(2020,7,30),new Date(2020,8,27)]])">ostatku trećeg</a> vala, što je konzistentno sa <a href="https://www.princeton.edu/news/2020/09/30/largest-covid-19-contact-tracing-study-date-finds-children-key-spread-evidence">studijama</a> koje ukazuju da bi mladi mogli biti superširitelji zaraze.</p>
 
 <div id="charts">
   <div id="age-chart" class="chart">
@@ -344,6 +344,9 @@ a.listLink:hover {
         <a href="" onclick="downloadData()">Preuzmi odabrane podatke.</a> 
     </aside>
 
+    <div style="display:block">
+        Nasumičnih 30 osoba iz odabira...
+    </div>
 
 </div>
 
