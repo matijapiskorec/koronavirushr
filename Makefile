@@ -13,3 +13,7 @@ download::
 	wget -O- https://www.koronavirus.hr/json/?action=po_osobama | sed 's/},{/},\n{/g' > koronavirus-hr-po-osobama.json
 	cp koronavirus-hr-po-osobama.json koronavirus-hr-po-osobama-$(DATE).json
 
+update: download
+	git add koronavirus-hr-po-osobama.json
+	git commit -m "Update data"
+	git push -u origin main
