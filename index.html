@@ -435,8 +435,10 @@ d3.json("koronavirus-hr-po-osobama.json", function(error, persons) {
   var zupanije = datum.group();
 
   let oneWeekInMiliseconds =  6.048e+8;
-  var startDate = new Date(Math.min.apply(null,persons.map(function(x){return x.Datum})));
-  var endDate = new Date(Math.max.apply(null,persons.map(function(x){return x.Datum})) + oneWeekInMiliseconds);
+  // var startDate = new Date(Math.min.apply(null,persons.map(function(x){return x.Datum})));
+  var startDate = new Date(Math.min(...new Set([...persons.map(function(x){return x.Datum})].map(x=>x.getTime()))));
+  // var endDate = new Date(Math.max.apply(null,persons.map(function(x){return x.Datum})) + oneWeekInMiliseconds);
+  var endDate = new Date(Math.max(...new Set([...persons.map(function(x){return x.Datum})].map(x=>x.getTime()))) + oneWeekInMiliseconds);
 
   var charts = [
 
