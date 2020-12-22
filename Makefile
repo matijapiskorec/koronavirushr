@@ -2,7 +2,7 @@
 DATE = $(shell date +'%d-%m-%Y')
 
 server: index.html download
-	python3 -m http.server
+	python3 -m http.server 8001
 
 # Create a make rule for downloading data from koronavirus.hr using wget
 # Downloaded json is split into multiple rows to make git versioning easier
