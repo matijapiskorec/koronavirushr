@@ -17,3 +17,9 @@ update: download
 	git add koronavirus-hr-po-osobama.json
 	git commit -m "Update data"
 	git push -u origin main
+
+commit::
+	git add koronavirus-hr-po-osobama.json
+	git commit -m "Update data"
+	git push -u origin main
+
