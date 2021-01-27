@@ -1,7 +1,10 @@
 
 DATE = $(shell date +'%d-%m-%Y')
 
-server: index.html download
+all: index.html download
+	python3 -m http.server 8001
+
+server: FORCE 
 	python3 -m http.server 8001
 
 # Create a make rule for downloading data from koronavirus.hr using wget
@@ -23,3 +26,4 @@ commit::
 	git commit -m "Update data"
 	git push -u origin main
 
+FORCE:
